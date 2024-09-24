@@ -1,34 +1,71 @@
+
 body{
+    font-family: Arial, Helvetica, sans-serif;
     background: url(/progetto-MyPage/MyPage/assets/images/Open-Book-Right.png) ,yellow;
     background-size: cover;
     background-repeat: no-repeat;
+    height: 2000px;
 }
 .page{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
 }
 .bookmark{
+    position: fixed;
+    color: white;
+    background-color: #0606b6;
     display: flex;
     flex-direction: column;
-    background-color: green;
-    width: 20%;
-    height: 100vh;
-    position: absolute;
-    padding: 2%;
-    margin: 2%;
-    h1{
-        font-size: 2.5vw;
+    top: 0;
+    left: 1.5vw;
+    width: 5%;
+    height: 100%;
+    box-shadow:4px 2px 2px gray ;
+    &:has(input:not(:checked)){
+        & p{
+            display: none;
+        }
     }
+    &:has(input:checked){
+        width: 10%;
+    }
+    transition: all 0.5s ease-in-out;
+    & ul{
+        list-style: none;
+    }
+    & a{
+        color: white;
+        text-decoration: inherit;
+        padding: 5px;
+        width: 100%;
+        display: block;
+        float: right;
+        border:1px black;
+    }
+    & a:hover{
+        background-color: #0101ff;
+    }
+    & .icon{
+        width: 40px;
+    }
+    & p{
+        text-align: center;
+        display: inline;
+    }
+}
+.menu{
+    display: flex;
+    flex-direction: row;
 }
 
 .content-index{
-    display: flex;
-    justify-content: center;
     align-items: center;
+    margin: auto;
 }
 
 .profile-image{
     border-radius: 50%;
+    box-shadow: 10px 5px 5px #010135;
+    width: 2.5vw;
 }
+
