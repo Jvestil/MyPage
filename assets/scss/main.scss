@@ -1,71 +1,138 @@
-
+@import 'variables';
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: url(/progetto-MyPage/MyPage/assets/images/Open-Book-Right.png) ,yellow;
+    font-family: sans-serif;
+    background: url(/progetto-MyPage/MyPage/assets/images/Open-Book-Right.png) ,rgb(221, 221, 185);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 2000px;
 }
 .page{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
+
+//media query
+    @media only screen and (max-width: 430px) {
+        .bookmark {
+            font-size: 7px;
+        }
+        .icon{
+            width: 15px;
+        }
+     }
+    @media only screen and (min-width: 431px) and (max-width: 960px) {
+        .bookmark{
+            font-size: 15px;
+        }
+        .icon{
+            width: 30px;
+        }
+    }
+    @media only screen and (min-width: 961px) {
+        .bookmark{
+            font-size: 20px;
+        }
+        .icon{
+            width: 40px;
+        }
+    }
+
+
+//bookmark styles
 .bookmark{
     position: fixed;
-    color: white;
-    background-color: #0606b6;
+    color: $color-bookmark;
+    background-color: $background-color-bookmark;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     top: 0;
-    left: 1.5vw;
-    width: 5%;
+    left: 4vw;
+    width: 10%;
     height: 100%;
     box-shadow:4px 2px 2px gray ;
+    transition: all 1s ease;
+    
+    
+
+    //input for bookmark
     &:has(input:not(:checked)){
         & p{
             display: none;
         }
     }
     &:has(input:checked){
-        width: 10%;
+        width: 20%;
     }
-    transition: all 0.5s ease-in-out;
+    //styles on list in bookmark
     & ul{
         list-style: none;
+        padding: 0;
     }
+
+    //styles on links in bookmark
     & a{
-        color: white;
+        color: rgb(0, 0, 0);
         text-decoration: inherit;
-        padding: 5px;
+        padding: .5vw 0 .5vw 0;
         width: 100%;
         display: block;
-        float: right;
-        border:1px black;
     }
-    & a:hover{
-        background-color: #0101ff;
-    }
-    & .icon{
-        width: 40px;
-    }
-    & p{
+    //styles of pargraph in bookmark
+    & p{ 
         text-align: center;
         display: inline;
+        transition: all .1s ease-in-out;
+        font-weight: bold;
+        padding-left: 2vw;
+        transition: all 1s ease;
+    }
+
+    //burger menu
+    & .menu-icon{
+        padding: 3vh 2vw 3vh 2vw;
+        position: relative;
+        margin-top: .9vh;
+    }
+    & .menu-icon .nav-icon{
+        background-color: rgb(0, 0, 0);
+        display: block;
+        width: 2em;
+        height: .2em;
+        position: relative;
+        transition: background-color 0.2s ease-out;
+    }
+    & .menu-icon .nav-icon::before,
+    & .menu-icon .nav-icon::after{
+        background-color: rgb(0, 0, 0);
+        content: "";
+        height: 100%;
+        width: 100%;
+        transition: all 0.2s ease-out;
+        position: absolute;
+    }
+    & .menu-icon .nav-icon::before{
+        top: .7em;
+    }
+    & .menu-icon .nav-icon::after{
+        top: -0.7em;
     }
 }
-.menu{
-    display: flex;
-    flex-direction: row;
+//checkbox for the bookmark
+.menu-btn{
+    display: none;
 }
-
+//style on the content side of the page
 .content-index{
-    align-items: center;
-    margin: auto;
+    justify-content: center;
+    font-size: 3vw;
+    margin-top: 10%;
 }
-
+//style on the porfile image on the bookmark
 .profile-image{
     border-radius: 50%;
-    box-shadow: 10px 5px 5px #010135;
-    width: 2.5vw;
+    box-shadow: 4px 2px 2px #000000;
+    width: 4vw;
+    align-self: center;
 }
-
