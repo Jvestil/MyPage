@@ -127,6 +127,13 @@ body{
 .content-index{
     font-size: 3vw;
     margin-top: 20%;
+    & a{
+        text-decoration: inherit;
+        color: #000000;
+    }
+    & ul{
+        padding: 0;
+    }
 }
 //style on the porfile image on the bookmark
 .profile-image{

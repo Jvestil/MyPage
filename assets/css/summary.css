@@ -111,10 +111,17 @@ body {
   font-size: 3vw;
   margin-top: 20%;
 }
+.content-index a {
+  text-decoration: inherit;
+  color: #000000;
+}
+.content-index ul {
+  padding: 0;
+}
 
 .profile-image {
   border-radius: 50%;
   box-shadow: 4px 2px 2px #000000;
   width: 4vw;
   align-self: center;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=summary.css.map */

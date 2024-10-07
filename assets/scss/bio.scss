@@ -125,8 +125,10 @@ body{
 }
 //style on the content side of the page
 .content-index{
+    justify-content: center;
     font-size: 3vw;
-    margin-top: 20%;
+    margin:10% 20% 20%;
+    clear: both;
 }
 //style on the porfile image on the bookmark
 .profile-image{
