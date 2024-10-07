@@ -1,7 +1,7 @@
 @import 'variables';
 body{
     font-family: sans-serif;
-    background: url(/progetto-MyPage/MyPage/assets/images/Open-Book-Right.png) ,rgb(221, 221, 185);
+    background: url(/progetto-MyPage/MyPage/assets/images/Open-Book-Left.png) ,rgb(221, 221, 185);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -12,30 +12,30 @@ body{
 }
 
 //media query
-    @media only screen and (max-width: 430px) {
-        .bookmark {
-            font-size: 7px;
-        }
-        .icon{
-            width: 15px;
-        }
-     }
-    @media only screen and (min-width: 431px) and (max-width: 960px) {
-        .bookmark{
-            font-size: 15px;
-        }
-        .icon{
-            width: 30px;
-        }
+@media only screen and (max-width: 430px) {
+    .bookmark {
+        font-size: 7px;
     }
-    @media only screen and (min-width: 961px) {
-        .bookmark{
-            font-size: 20px;
-        }
-        .icon{
-            width: 40px;
-        }
+    .icon{
+        width: 15px;
     }
+    }
+@media only screen and (min-width: 431px) and (max-width: 960px) {
+    .bookmark{
+        font-size: 15px;
+    }
+    .icon{
+        width: 30px;
+    }
+}
+@media only screen and (min-width: 961px) {
+    .bookmark{
+        font-size: 20px;
+    }
+    .icon{
+        width: 40px;
+    }
+}
 
 
 //bookmark styles
@@ -48,13 +48,11 @@ body{
     justify-content: flex-start;
     align-items: center;
     top: 0;
-    left: 4vw;
+    right: 4vw;
     width: 10%;
     height: 100%;
     box-shadow:4px 2px 2px gray ;
     transition: all 1s ease;
-    
-    
 
     //input for bookmark
     &:has(input:not(:checked)){

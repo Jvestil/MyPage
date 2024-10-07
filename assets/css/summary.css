@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  background: url(/progetto-MyPage/MyPage/assets/images/Open-Book-Right.png), rgb(221, 221, 185);
+  background: url(/progetto-MyPage/MyPage/assets/images/Open-Book-Left.png), rgb(221, 221, 185);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -44,7 +44,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   top: 0;
-  left: 4vw;
+  right: 4vw;
   width: 10%;
   height: 100%;
   box-shadow: 4px 2px 2px gray;
